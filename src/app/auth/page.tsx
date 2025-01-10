@@ -14,6 +14,7 @@ import Notification from "@/components/generics/notification";
 import { title, subtitle } from "@/components/primitives";
 import { OTP_CODE_LENGTH as OTP_LENGTH } from "@/utils/constants";
 import { isLocal, isTesting } from "@/utils/helpers";
+import { getCometh4337Wallet } from "@/utils/wallet/getComethWallet";
 
 export default function AuthPage() {
   const [email, setEmail] = useState("");

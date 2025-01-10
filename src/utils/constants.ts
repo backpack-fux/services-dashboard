@@ -1,5 +1,5 @@
 import { Address, erc20Abi } from "viem";
-
+import dayjs from "dayjs";
 import { isLocal } from "./helpers";
 
 export const MERCHANT_COOKIE_NAME = "pyv2_merchant_token";
@@ -17,3 +17,6 @@ export const BASE_USDC = {
 
 export const MOCK_SETTLEMENT_ADDRESS = "0x595ec62736Bf19445d7F00D66072B3a3c7aeA0F5";
 export const MOCK_BALANCE = "750";
+
+const todayStr = dayjs().format("MMM D YYYY hh:mm A");
+export const PASSKEY_NAME = (isLocal ? "Backpack Passkey [STAGING]" : "Backpack Passkey") + " " + todayStr;
